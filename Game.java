@@ -1,4 +1,3 @@
-
 //Ashutosh Sharma 2016231
 
 import java.util.Scanner;
@@ -82,6 +81,7 @@ public class Game extends Coordinate {
 												&& k != j) {
 											OverlapException e = new OverlapException(knight[k].name);
 											pw.println("\n" + e.toString());
+											knight[k].remove();
 											b1 = false;
 											throw e;
 										}
@@ -109,7 +109,8 @@ public class Game extends Coordinate {
 				}
 			}
 		}pw.close();sc.close();
-}}
+}
+}
 
 class Knight extends Coordinate {
 	String name;
